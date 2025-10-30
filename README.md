@@ -4,6 +4,12 @@ Automatically transliterate Latin characters to Arabic letters in a predictable 
 
 A simple, interactive web application that converts romanized Arabic text (both formal transliteration and Franco-Arabic/Arabizi) into proper Arabic script in real-time.
 
+## 🌐 Live Demo
+
+**Try it now:** [https://aloisama.github.io/arabic-transliterator/](https://aloisama.github.io/arabic-transliterator/)
+
+The app is hosted on GitHub Pages and works directly in your browser - no installation required!
+
 ## ✨ Features
 
 - **Real-time transliteration** as you type
@@ -85,8 +91,13 @@ Try typing these in the app:
 
 ```
 arabic-transliterator/
+├── .github/
+│   └── workflows/
+│       └── deploy.yml  # GitHub Pages deployment
 ├── index.html          # Main HTML interface
 ├── transliterator.js   # Transliteration logic
+├── test.js            # Test suite
+├── .nojekyll          # Prevents Jekyll processing
 ├── LICENSE            # GPLv3 License
 └── README.md          # This file
 ```

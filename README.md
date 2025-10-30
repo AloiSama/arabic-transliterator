@@ -10,6 +10,8 @@ A simple, interactive web application that converts romanized Arabic text (both 
 
 The app is hosted on GitHub Pages and works directly in your browser - no installation required!
 
+> **First time setup?** If you just cloned this repo and the live demo link doesn't work yet, see [SETUP.md](SETUP.md) for step-by-step instructions to enable GitHub Pages (takes 2 minutes).
+
 ## ✨ Features
 
 - **Real-time transliteration** as you type

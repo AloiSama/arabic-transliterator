@@ -12,219 +12,330 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
+            padding: 0;
         }
 
-        .container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            max-width: 900px;
-            width: 100%;
-            padding: 40px;
+        header {
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
         }
 
         h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 10px;
-            font-size: 2.5em;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 0.25rem;
         }
 
-        .subtitle {
-            text-align: center;
+        .tagline {
             color: #666;
-            margin-bottom: 30px;
-            font-size: 1.1em;
+            font-size: 0.9rem;
         }
 
-        .info-box {
-            background: #f0f4ff;
-            border-left: 4px solid #667eea;
-            padding: 15px;
-            margin-bottom: 25px;
-            border-radius: 5px;
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem 3rem;
         }
 
-        .info-box h3 {
-            color: #667eea;
-            margin-bottom: 8px;
+        .main-area {
+            background: white;
+            border: 1px solid #ddd;
+            margin-bottom: 1.5rem;
         }
 
-        .info-box p {
-            color: #555;
-            line-height: 1.6;
+        .controls {
+            border-bottom: 1px solid #eee;
+            padding: 0.75rem 1rem;
+            display: flex;
+            gap: 0.5rem;
+            background: #fafafa;
         }
 
-        .info-box code {
-            background: #e0e7ff;
-            padding: 2px 6px;
+        button {
+            padding: 0.4rem 0.9rem;
+            border: 1px solid #ccc;
+            background: white;
+            font-size: 0.875rem;
+            cursor: pointer;
+            font-family: inherit;
             border-radius: 3px;
-            font-family: 'Courier New', monospace;
         }
 
-        .transliteration-area {
+        button:hover {
+            background: #f8f8f8;
+            border-color: #999;
+        }
+
+        button:active {
+            background: #eee;
+        }
+
+        .copy-btn {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        .copy-btn:hover {
+            background: #1d4ed8;
+            border-color: #1d4ed8;
+        }
+
+        .transliteration-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-bottom: 20px;
+            min-height: 400px;
         }
 
-        .input-section, .output-section {
+        .panel {
             display: flex;
             flex-direction: column;
         }
 
-        label {
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 8px;
-            font-size: 1.1em;
+        .panel-header {
+            padding: 0.6rem 1rem;
+            background: #f9f9f9;
+            border-bottom: 1px solid #eee;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+        }
+
+        .panel:first-child {
+            border-right: 1px solid #eee;
         }
 
         textarea {
-            padding: 15px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            font-size: 1.1em;
-            resize: vertical;
-            min-height: 200px;
+            flex: 1;
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
             font-family: inherit;
-            transition: border-color 0.3s;
+            resize: none;
+            line-height: 1.6;
         }
 
         textarea:focus {
             outline: none;
-            border-color: #667eea;
+            background: #fafafa;
+        }
+
+        #input {
+            font-family: 'Courier New', Consolas, monospace;
         }
 
         #output {
-            background: #f9fafb;
-            font-size: 1.5em;
-            line-height: 1.8;
             direction: rtl;
             text-align: right;
+            font-size: 1.4rem;
+            background: #fcfcfc;
+            color: #1a1a1a;
         }
 
-        .buttons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
+        .info-section {
+            background: white;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
         }
 
-        button {
-            padding: 12px 30px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1em;
+        .info-section h2 {
+            font-size: 1rem;
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
+            margin-bottom: 0.75rem;
+            color: #333;
         }
 
-        .clear-btn {
-            background: #ef4444;
-            color: white;
+        .info-section p {
+            color: #555;
+            line-height: 1.5;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
         }
 
-        .clear-btn:hover {
-            background: #dc2626;
-            transform: translateY(-2px);
+        .mapping-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
         }
 
-        .copy-btn {
-            background: #10b981;
-            color: white;
+        .mapping-item {
+            padding: 0.75rem;
+            background: #f9f9f9;
+            border-left: 3px solid #666;
+            font-size: 0.85rem;
         }
 
-        .copy-btn:hover {
-            background: #059669;
-            transform: translateY(-2px);
-        }
-
-        .examples {
-            margin-top: 30px;
-            padding: 20px;
-            background: #fef3c7;
-            border-radius: 10px;
-        }
-
-        .examples h3 {
-            color: #92400e;
-            margin-bottom: 10px;
-        }
-
-        .example-item {
-            margin: 8px 0;
+        .mapping-item code {
+            background: #e8e8e8;
+            padding: 0.15rem 0.4rem;
+            border-radius: 2px;
             font-family: 'Courier New', monospace;
+            font-size: 0.9em;
         }
 
-        .example-item strong {
-            color: #92400e;
+        .mapping-item .arrow {
+            color: #999;
+            margin: 0 0.5rem;
+        }
+
+        .mapping-item .arabic {
+            font-size: 1.3em;
+            color: #1a1a1a;
+        }
+
+        .examples-list {
+            list-style: none;
+            margin-top: 0.75rem;
+        }
+
+        .examples-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+        }
+
+        .examples-list li:last-child {
+            border-bottom: none;
+        }
+
+        .examples-list .input-ex {
+            color: #0066cc;
+            cursor: pointer;
+        }
+
+        .examples-list .input-ex:hover {
+            text-decoration: underline;
+        }
+
+        .examples-list .output-ex {
+            margin-left: 1rem;
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #999;
+            font-size: 0.85rem;
+        }
+
+        footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            .transliteration-area {
+            .transliteration-grid {
                 grid-template-columns: 1fr;
             }
 
-            h1 {
-                font-size: 2em;
+            .panel:first-child {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+
+            .mapping-grid {
+                grid-template-columns: 1fr;
             }
 
             .container {
-                padding: 20px;
+                padding: 0 1rem 2rem;
+            }
+
+            header {
+                padding: 1rem;
             }
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Arabic Transliterator</h1>
+        <p class="tagline">Convert romanized text to Arabic script</p>
+    </header>
+
     <div class="container">
-        <h1>🌙 Arabic Transliterator</h1>
-        <p class="subtitle">Convert Latin text to Arabic script automatically</p>
-
-        <div class="info-box">
-            <h3>How to use:</h3>
-            <p>
-                Type romanized Arabic text in the left box. Supports both formal transliteration
-                (e.g., <code>kh</code>, <code>sh</code>) and Franco-Arabic/Arabizi numbers
-                (e.g., <code>3</code> for ع, <code>7</code> for ح, <code>9</code> for ق).
-            </p>
-        </div>
-
-        <div class="transliteration-area">
-            <div class="input-section">
-                <label for="input">Latin Text (Input):</label>
-                <textarea id="input" placeholder="Type here... e.g., 'marhaban', 'as-salamu 3alaykum'"></textarea>
+        <div class="main-area">
+            <div class="controls">
+                <button onclick="clearText()">Clear</button>
+                <button class="copy-btn" onclick="copyOutput()">Copy Output</button>
             </div>
-            <div class="output-section">
-                <label for="output">Arabic Text (Output):</label>
-                <textarea id="output" readonly placeholder="Arabic output will appear here..."></textarea>
+            <div class="transliteration-grid">
+                <div class="panel">
+                    <div class="panel-header">Input (Latin)</div>
+                    <textarea id="input" placeholder="Type romanized Arabic here...&#10;&#10;Try: marhaban&#10;Try: as-salamu 3alaykum"></textarea>
+                </div>
+                <div class="panel">
+                    <div class="panel-header">Output (Arabic)</div>
+                    <textarea id="output" readonly placeholder="النص العربي"></textarea>
+                </div>
             </div>
         </div>
 
-        <div class="buttons">
-            <button class="clear-btn" onclick="clearText()">Clear</button>
-            <button class="copy-btn" onclick="copyOutput()">Copy Arabic Text</button>
+        <div class="info-section">
+            <h2>Quick Reference</h2>
+            <p>This tool supports both standard transliteration and Franco-Arabic (Arabizi) where numbers represent Arabic letters:</p>
+
+            <div class="mapping-grid">
+                <div class="mapping-item">
+                    <code>kh</code><span class="arrow">→</span><span class="arabic">خ</span>
+                </div>
+                <div class="mapping-item">
+                    <code>sh</code><span class="arrow">→</span><span class="arabic">ش</span>
+                </div>
+                <div class="mapping-item">
+                    <code>gh</code><span class="arrow">→</span><span class="arabic">غ</span>
+                </div>
+                <div class="mapping-item">
+                    <code>3</code><span class="arrow">→</span><span class="arabic">ع</span> (ayn)
+                </div>
+                <div class="mapping-item">
+                    <code>7</code><span class="arrow">→</span><span class="arabic">ح</span> (ha)
+                </div>
+                <div class="mapping-item">
+                    <code>9</code><span class="arrow">→</span><span class="arabic">ق</span> (qaf)
+                </div>
+            </div>
         </div>
 
-        <div class="examples">
-            <h3>Try these examples:</h3>
-            <div class="example-item"><strong>marhaban</strong> → مرحبا</div>
-            <div class="example-item"><strong>as-salamu 3alaykum</strong> → اس-سلامو علیكوم</div>
-            <div class="example-item"><strong>shukran</strong> → شكران</div>
-            <div class="example-item"><strong>kayfa 7alak</strong> → كیفا حالاك</div>
-            <div class="example-item"><strong>ahlan wa sahlan</strong> → احلان وا ساحلان</div>
+        <div class="info-section">
+            <h2>Examples</h2>
+            <ul class="examples-list">
+                <li><span class="input-ex" onclick="setInput('marhaban')">marhaban</span><span class="output-ex">مارحابان</span></li>
+                <li><span class="input-ex" onclick="setInput('shukran')">shukran</span><span class="output-ex">شوكران</span></li>
+                <li><span class="input-ex" onclick="setInput('as-salamu 3alaykum')">as-salamu 3alaykum</span><span class="output-ex">اس-سالامو عالایكوم</span></li>
+                <li><span class="input-ex" onclick="setInput('kayfa 7alak')">kayfa 7alak</span><span class="output-ex">كایفا حالاك</span></li>
+                <li><span class="input-ex" onclick="setInput('ahlan wa sahlan')">ahlan wa sahlan</span><span class="output-ex">احلان وا ساحلان</span></li>
+            </ul>
         </div>
     </div>
 
+    <footer>
+        <p>Open source • <a href="https://github.com/AloiSama/arabic-transliterator" target="_blank">View on GitHub</a></p>
+    </footer>
+
     <script src="transliterator.js"></script>
+    <script>
+        function setInput(text) {
+            document.getElementById('input').value = text;
+            updateTransliteration();
+        }
+    </script>
 </body>
 </html>
